@@ -2,18 +2,122 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World!</title>
-    <style>
-        h1 {
-            text-align: center;
-        }
-    </style>
+	<meta charset="UTF-8">
+	<title>Uzaylı Kaçırma Sipariş Formu</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;200;300;400;500;600&display=swap"
+		rel="stylesheet">
+	<link href="css/forms.css" rel="stylesheet">
 </head>
 
 <body>
-    <h1>Hello World!</h1>
+	<div class="wrapper">
+		<section>
+			<h1>Uzaylı Kaçırma Sipariş Formu</h1>
+			<p>Kaliteli UFO'larımızdan birinin uzaylılarca kaçırılması emrini vermek için aşağıdaki formu doldurun.</p>
+
+			<form action="https://e3vwdl4bpd.execute-api.us-west-2.amazonaws.com/default/API2SES" method="post">
+				<!-- <form></form>  Öğe formtüm formunuzu çevreler. Gerekli!  -->
+				<input type="hidden" name="send_to" value="cakirercn@gmail.com">
+				<fieldset>
+					<!-- HTML'de "fieldset" etiketi , bir formdaki ilgili verileri gruplamak için kullanılır. "legend" etiketi ise "fieldset" öğesi için bir başlık tanımlar. -->
+					<legend>İletişim Bilgileriniz</legend>
+					<label for="name">Adınız</label>
+					<!--<label></label> Bir metin etiketini form alanıyla ∏ilişkilendirir. -->
+					<input type="text" id="name" name="name">
+					<!-- <input type="text"> Basit metin giriş alanı. Genel metinleri toplamak için kullanışlıdır (ad, adres, kısa yanıtları düşünün) -->
+					<label for="phone">Telefon numarası</label>
+					<input type="tel" id="phone" name="phone"
+						placeholder="Alan Kodunu Unutmayin!"><!-- Placeholder özelliği giriş alanın girilmesi düşünülen değer ile ilgili açıklayıcı kısa ipucu belirtir. İpucu giriş alanında görüntülenir ve odaklanıldığında kaybolur veya pasifleşir. Placeholder özelliği şu giriş alanları ile çalışır: text, search, url, tel, email ve password. -->
+
+					<!-- <input type="tel">
+					Telefon numarası alanı.
+					Masaüstündeki metin alanından farklı görünmüyor ancak çoğu mobil cihazda bir sayı klavyesi görüntülenir. -->
+					<label for="email">E-posta</label>
+					<input type="email" id="email" name="email">
+					<!-- <input type="email">
+					E-posta alanı.
+					Masaüstündeki metin alanından farklı görünmese de çoğu mobil cihazda, kolayca erişilebilen @ sembolüne sahip bir klavye ve bazen de ek tuşlar (.com tuşu gibi) görüntülenir. -->
+				</fieldset>
+				<fieldset>
+					<legend>Kaçırılışın hakkında </legend>
+					<label for="date">Talep edilen tarih</label>
+					<input type="date" id="date" name="date">
+					<!--  <input type="date"> Tarih girişi için kullanışlıdır. -->
+					<label for="qty">Kaç kişinin kaçırılmasını istersiniz?</label>
+					<input type="number" id="qty" name="qty" min="1" max="10">
+					<!-- <input type="number">
+						Numara girişi. Olumlu ve olumsuz gidebilir. Belirtilen aralığın dışında olmaları durumunda sayıların hata kontrolünü yapmaz. Mobil klavyeyi sayılara değiştirebilir.Öznitellikler:
+						min— minimum değeri ayarlayın
+						max— maksimum değeri ayarlayın -->
+					<p>Ne tür UFO'yu tercih edersiniz?</p>
+					<label>
+						<input checked type="radio" name="ufotype" value="classic">
+						Klasik oval UFO
+					</label>
+					<!-- <input type="radio">
+						Radyo düğmeleri — birkaç seçenek arasından tek bir seçim için uygundur. En az iki seçenek olmalı.Öznitellikler:
+						name— bir gruptaki TÜM radyo düğmeleri için her zaman aynıdır — tek bir yanıta ilişkin seçenekleri tanımlar
+						value— her radyo düğmesi için benzersiz — bu seçim nedir?
+						checked— formu bu değer önceden seçilmiş olarak başlatın -->
+					<label>
+						<input type="radio" name="ufotype" value="starwars">
+						Yıldız Savaşları tarzı İmparatorluk kruvazörü
+					</label>
+					<label>
+						<input type="radio" name="ufotype" value="galactica">
+						Battlestar Galactica tarzı Viper
+					</label>
+					<label>
+						<input type="radio" name="ufotype" value="borg">
+						Borg tarzı küp
+					</label>
+					<label for="abtype">
+						Ne tür bir kaçırılma deneyimi istiyorsunuz?
+					</label>
+					<select name="abtype" id="abtype">
+						<option selected>Birini Sec...</option>
+						<option value="tour">Güneş sistemi turu</option>
+						<option value="dinner">Uzaylı yemeği ve tartışma</option>
+						<option value="dance">Uzaylı dansı dersleri</option>
+						<option value="whales">Balina izleme</option>
+					</select>
+					<!-- <select></select>
+						Açılır menüyü seçin — çok sayıda seçenek arasından tek bir seçeneği seçmek için uygundur. Ziyaretçinin ne bekleyeceğini bildiği durumlarda en iyi şekilde kullanılır -->
+					<label for="comments">
+						Özel İstekler:
+					</label>
+					<textarea name="comments" id="comments"></textarea>
+					<!-- <textarea></textarea> Genişletilmiş yorumlar için büyük bir kutu. -->
+					<label for="subscribe">
+						<input type="checkbox" name="subscribe" value="subscribe" checked> Beni e-posta listene ekle
+					</label>
+					<!-- <input type="checkbox">
+				Onay kutuları — birkaç seçenek arasında birden fazla seçenek için uygundur. Tek bir onay kutusu olabilir.Öznitellikler:
+				name— isteğe bağlıdır, ancak bu onay kutusunun neyle ilgili olduğunu açıklar ( ile birlikte ID)
+				value— her onay kutusu için benzersiz değer - bu seçim nedir?
+				checked— formu bu öğe seçili olarak başlatın -->
+				</fieldset>
+				<button type="submit">Gonder!</button>
+			</form>
+
+		</section>
+		<aside>
+			<h3>Konumumuz</h3>
+			<iframe
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1011.7727722670472!2d-93.27113917523772!3d44.977656884188725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87f63b92a9636401%3A0xf1a376ecca3304c0!2sMJG%20International!5e0!3m2!1str!2str!4v1701907683332!5m2!1str!2str"
+				width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+				referrerpolicy="no-referrer-when-downgrade"></iframe>
+			<address>
+				Frontend Masters &middot;
+				60 South 6th Street &middot;
+				Suite 3625 &middot;
+				Minneapolis, MN 55402
+			</address>
+		</aside>
+	</div>
 </body>
+<script src="/Formlar/begin/js/forms.js"></script>
 
 </html>
