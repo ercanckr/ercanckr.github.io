@@ -14,10 +14,12 @@ body {
 	padding: 0;
 	background-image: url(../img/galaxy.jpg);
 	background-size: cover;
+	background-position: 50% 50%;
 }
 
 .wrapper {
 	width: 80%;
+	height: 100%;
 	margin: 0 auto;
 	padding: 1em;
 	display: flex;
@@ -117,7 +119,7 @@ select {
 	}
   }
   
-  @media (min-width:1000px) {
+  @media (max-width:1000px) {
 
 	.wrapper {
 		display: flex;
