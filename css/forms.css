@@ -39,7 +39,8 @@ aside {
 	flex-basis: 33%;
 }
 
-p, [for="abtype"] {
+p,
+[for="abtype"] {
 	margin-bottom: 0;
 	margin-top: 2rem;
 	/* 	margin: 2rem 0 0 0; */
@@ -58,18 +59,22 @@ legend {
 	margin-bottom: 1rem;
 	display: block;
 }
-label{
-display: block;
-padding-bottom: 0.3rem;
+
+label {
+	display: block;
+	padding-bottom: 0.3rem;
 }
-textarea{
+
+textarea {
 	height: 10rem;
 	padding: 1rem;
 }
-select{
+
+select {
 	font-size: 1rem;
 }
-button{
+
+button {
 	font-size: 1rem;
 	margin: 2rem 0;
 	background-color: #bb342f;
@@ -79,11 +84,15 @@ button{
 	border-radius: 10px;
 	transition: .5s ease;
 }
-button:hover{
+
+button:hover {
 	background-color: white;
 	color: #bb342f;
 }
-input:not([type="radio"],[type="checkbox"]),textarea,select{
+
+input:not([type="radio"], [type="checkbox"]),
+textarea,
+select {
 	display: block;
 	margin-bottom: 2rem;
 	width: 20rem;
@@ -94,3 +103,27 @@ input:not([type="radio"],[type="checkbox"]),textarea,select{
 	outline: none;
 	border-radius: 10px;
 }
+
+
+
+
+@media(max-width: 800px) {
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	
+	}
+  }
+  
+  @media (min-width:1000px) {
+
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	
+	}
+  }
