@@ -2,122 +2,160 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<title>Uzaylı Kaçırma Sipariş Formu</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;200;300;400;500;600&display=swap"
-		rel="stylesheet">
-	<link href="css/forms.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ercan Cakir Portfolyo WebSite</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
-	<div class="wrapper">
-		<section>
-			<h1>Uzaylı Kaçırma Sipariş Formu</h1>
-			<p>Kaliteli UFO'larımızdan birinin uzaylılarca kaçırılması emrini vermek için aşağıdaki formu doldurun.</p>
+    <nav>
+        <ul>
+            <li>
+                <h1>
+                    <a href="index.html"><span class="fa-solid fa-code"> </span><span> Ercan Cakir</span></a>
+                </h1>
+            </li>
+            <li><a href="#projects">Projeler</a></li>
+            <li><a href="https://ercnckr.netlify.app/">Hakkimda</a></li>
+            <li><a href="#contact">iletisim</a></li>
+            <li>
+                <a href="https://www.linkedin.com/in/ercan-%C3%A7ak%C4%B1r-381b5b29a/" target="_blank"><span
+                        class="fa-brands fa-linkedin" aria-hidden="true"></span>
+                    <span class="sr-only">LinkedIn</span></a>
+            </li>
+            <!-- 
+                    aria-hidden="true" bir HTML özelliğidir ve genellikle erişilebilirlik (accessibility) açısından kullanılır. Bu özellik, bir HTML öğesinin ekran okuyucular veya diğer erişilebilirlik teknolojileri tarafından algılanmasını veya okunmasını engellemek için kullanılır. -->
 
-			<form action="https://e3vwdl4bpd.execute-api.us-west-2.amazonaws.com/default/API2SES" method="post">
-				<!-- <form></form>  Öğe formtüm formunuzu çevreler. Gerekli!  -->
-				<input type="hidden" name="send_to" value="cakirercn@gmail.com">
-				<fieldset>
-					<!-- HTML'de "fieldset" etiketi , bir formdaki ilgili verileri gruplamak için kullanılır. "legend" etiketi ise "fieldset" öğesi için bir başlık tanımlar. -->
-					<legend>İletişim Bilgileriniz</legend>
-					<label for="name">Adınız</label>
-					<!--<label></label> Bir metin etiketini form alanıyla ∏ilişkilendirir. -->
-					<input type="text" id="name" name="name">
-					<!-- <input type="text"> Basit metin giriş alanı. Genel metinleri toplamak için kullanışlıdır (ad, adres, kısa yanıtları düşünün) -->
-					<label for="phone">Telefon numarası</label>
-					<input type="tel" id="phone" name="phone"
-						placeholder="Alan Kodunu Unutmayin!"><!-- Placeholder özelliği giriş alanın girilmesi düşünülen değer ile ilgili açıklayıcı kısa ipucu belirtir. İpucu giriş alanında görüntülenir ve odaklanıldığında kaybolur veya pasifleşir. Placeholder özelliği şu giriş alanları ile çalışır: text, search, url, tel, email ve password. -->
+            <!-- sr-only sınıfı, bir öğenin ekran üzerinde görünmez olmasını sağlar, ancak ekran okuyucular gibi erişilebilirlik teknolojileri tarafından okunabilir olmasını sağlar. Bu sayede, örneğin bir resim içindeki metni sadece ekran okuyuculara sunabilir ve görsel içeriği anlamakta zorlanan kullanıcılara yardımcı olabilirsiniz. -->
+            <li>
+                <a href="https://github.com/ercanckr" target="_blank"><span class="fa-brands fa-github"
+                        aria-hidden="true"></span><span class="sr-only">Github</span></a>
+            </li>
+            <li>
+                <a class="button" href="./hakkimda.html">özgeçmiş</a>
+            </li>
+        </ul>
+    </nav>
+    <section id="intro">
+        <p class="name">Merhaba, ben <span>Ercan Cakir.</span></p>
+        <h2>Frontend Teknolojilerine dayalı projeler öğreniyorum.</h2>
+        <p>
+            Şu anda Front-End Web Development üzerinde çalışıyorum ve bazı projeler yaparak HTML, CSS ve JavaScript
+            uzerine kendimi geliştiriyorum.
+        </p>
+        <p>
+            Şu anda
+            <a href="https://frontendmasters.com/" target="_blank">Frontend Masters</a>
+            Eğitim Kampını tamamlıyorum.
+        </p>
+    </section>
+    <div class="gradient"></div>
+    <div class="section-dkblue">
+        <section id="projects">
+            <h2>Gurur duyduğum projeler</h2>
+            <article>
+                <div class="text">
+                    <h3>Son Proje</h3>
+                    <h4>Blog Projesi</h4>
+                    <p class="blackbox"> Projenin açıklaması. Bu, geliştirdiğiniz veya üzerinde çalıştığınız temel
+                        bileşenleri de açıklarken oldukça kısa olmalıdır. İhtiyacınız olduğu kadar uzun olabilir ama en
+                        azından birkaç cümle uzunluğunda olmalıdır. Açıklamanın herhangi bir yerine belirli bağlantılar
+                        eklediğinizden emin olun. projeye <a
+                            href="https://ercnckrfrontend.netlify.app/css-blog-sayfasi/blog">Buradan
+                        </a>ulasabilirsiniz.
+                    </p>
+                    <h4>Kullanılan teknolojiler şunları içerir:</h4>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>SVG</li>
+                    </ul>
+                </div>
+                <img src="./img/blog.png" alt="Ercan Cakir'in Blogu." />
+            </article>
+            <article class="reverse">
+                <div class="text">
+                    <h3>Hesap Makinesi</h3>
+                    <h4>HTML ve CSS Alıştırması</h4>
+                    <p class="blackbox"> Programlama tamamen büyük problemleri alıp onları daha küçük problemlere
+                        bölmekle ilgilidir. Aynı anda çok fazla şeyin üstesinden gelmeye çalışıyorsanız, sorunu iki
+                        küçük soruna bölün ve bunlardan birini çözmeye çalışın.
+                        Şahsen ben önce HTML ve CSS'yi yazdım. Bunların hepsi halledildikten sonra JavaScript'i
+                        yapıyorum. projeye <a
+                            href="https://ercnckrfrontend.netlify.app/hesap-makinesi-html-css/">Buradan</a>
+                        Ulasabilirsiniz
 
-					<!-- <input type="tel">
-					Telefon numarası alanı.
-					Masaüstündeki metin alanından farklı görünmüyor ancak çoğu mobil cihazda bir sayı klavyesi görüntülenir. -->
-					<label for="email">E-posta</label>
-					<input type="email" id="email" name="email">
-					<!-- <input type="email">
-					E-posta alanı.
-					Masaüstündeki metin alanından farklı görünmese de çoğu mobil cihazda, kolayca erişilebilen @ sembolüne sahip bir klavye ve bazen de ek tuşlar (.com tuşu gibi) görüntülenir. -->
-				</fieldset>
-				<fieldset>
-					<legend>Kaçırılışın hakkında </legend>
-					<label for="date">Talep edilen tarih</label>
-					<input type="date" id="date" name="date">
-					<!--  <input type="date"> Tarih girişi için kullanışlıdır. -->
-					<label for="qty">Kaç kişinin kaçırılmasını istersiniz?</label>
-					<input type="number" id="qty" name="qty" min="1" max="10">
-					<!-- <input type="number">
-						Numara girişi. Olumlu ve olumsuz gidebilir. Belirtilen aralığın dışında olmaları durumunda sayıların hata kontrolünü yapmaz. Mobil klavyeyi sayılara değiştirebilir.Öznitellikler:
-						min— minimum değeri ayarlayın
-						max— maksimum değeri ayarlayın -->
-					<p>Ne tür UFO'yu tercih edersiniz?</p>
-					<label>
-						<input checked type="radio" name="ufotype" value="classic">
-						Klasik oval UFO
-					</label>
-					<!-- <input type="radio">
-						Radyo düğmeleri — birkaç seçenek arasından tek bir seçim için uygundur. En az iki seçenek olmalı.Öznitellikler:
-						name— bir gruptaki TÜM radyo düğmeleri için her zaman aynıdır — tek bir yanıta ilişkin seçenekleri tanımlar
-						value— her radyo düğmesi için benzersiz — bu seçim nedir?
-						checked— formu bu değer önceden seçilmiş olarak başlatın -->
-					<label>
-						<input type="radio" name="ufotype" value="starwars">
-						Yıldız Savaşları tarzı İmparatorluk kruvazörü
-					</label>
-					<label>
-						<input type="radio" name="ufotype" value="galactica">
-						Battlestar Galactica tarzı Viper
-					</label>
-					<label>
-						<input type="radio" name="ufotype" value="borg">
-						Borg tarzı küp
-					</label>
-					<label for="abtype">
-						Ne tür bir kaçırılma deneyimi istiyorsunuz?
-					</label>
-					<select name="abtype" id="abtype">
-						<option selected>Birini Sec...</option>
-						<option value="tour">Güneş sistemi turu</option>
-						<option value="dinner">Uzaylı yemeği ve tartışma</option>
-						<option value="dance">Uzaylı dansı dersleri</option>
-						<option value="whales">Balina izleme</option>
-					</select>
-					<!-- <select></select>
-						Açılır menüyü seçin — çok sayıda seçenek arasından tek bir seçeneği seçmek için uygundur. Ziyaretçinin ne bekleyeceğini bildiği durumlarda en iyi şekilde kullanılır -->
-					<label for="comments">
-						Özel İstekler:
-					</label>
-					<textarea name="comments" id="comments"></textarea>
-					<!-- <textarea></textarea> Genişletilmiş yorumlar için büyük bir kutu. -->
-					<label for="subscribe">
-						<input type="checkbox" name="subscribe" value="subscribe" checked> Beni e-posta listene ekle
-					</label>
-					<!-- <input type="checkbox">
-				Onay kutuları — birkaç seçenek arasında birden fazla seçenek için uygundur. Tek bir onay kutusu olabilir.Öznitellikler:
-				name— isteğe bağlıdır, ancak bu onay kutusunun neyle ilgili olduğunu açıklar ( ile birlikte ID)
-				value— her onay kutusu için benzersiz değer - bu seçim nedir?
-				checked— formu bu öğe seçili olarak başlatın -->
-				</fieldset>
-				<button type="submit">Gonder!</button>
-			</form>
-
-		</section>
-		<aside>
-			<h3>Konumumuz</h3>
-			<iframe
-				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1011.7727722670472!2d-93.27113917523772!3d44.977656884188725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87f63b92a9636401%3A0xf1a376ecca3304c0!2sMJG%20International!5e0!3m2!1str!2str!4v1701907683332!5m2!1str!2str"
-				width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-				referrerpolicy="no-referrer-when-downgrade"></iframe>
-			<address>
-				Frontend Masters &middot;
-				60 South 6th Street &middot;
-				Suite 3625 &middot;
-				Minneapolis, MN 55402
-			</address>
-		</aside>
-	</div>
+                    </p>
+                    <h4>Kullanılan teknolojiler şunları içerir:</h4>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                </div>
+                <img src="./img/hesap.png" alt="Hesap Makinesi." />
+            </article>
+            <article>
+                <div class="text">
+                    <h3>Formlar</h3>
+                    <h4>Web Yazı Tipleri ve Daha Fazlası</h4>
+                    <p class="blackbox"> Vay, bu hafta ÇOK şey yaptık! İncelemeye, yeni sayfalar oluşturmaya veya
+                        alıştırmalar üzerinde çalışmaya zaman harcamak istiyorsanız, bunu yapmak için harika bir zaman.
+                        Projeye <a href="https://ercnckrfrontend.netlify.app/formlar/begin/forms">Buradan </a>
+                        ulasabilirsiniz
+                    </p>
+                    <h4>Kullanılan teknolojiler şunları içerir:</h4>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>SVG</li>
+                    </ul>
+                </div>
+                <img src="./img/form.png" alt="Form." />
+            </article>
+        </section>
+    </div>
+    <div class="gradient"></div>
+    <div class="section-plum">
+        <section id="contact">
+            <h2>Bana ulaşın</h2>
+            <p>
+                Dünyada hiç kimse, seyirci koltuğunda oturan cesur insanları alkışlamaz.
+                Alkışlar, hep sahneye çıkanlar içindir..
+            </p>
+            <p><a class="button" href="https://ercanckr.github.io/">E-Posta</a></p>
+        </section>
+    </div>
+    <div class="gradient"></div>
+    <footer>
+        <h2>
+            Ercan Cakir &middot; Frontend Developer
+        </h2>
+        <ul>
+            <li>
+                <a href="https://www.linkedin.com/in/ercan-%C3%A7ak%C4%B1r-381b5b29a/" target="_blank">
+                    <span class="fa-brands fa-linkedin" aria-hidden="true"> </span>
+                    <span class="sr-only">LinkedIn</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/ercanckr" target="_blank">
+                    <span class="fa-brands fa-github" aria-hidden="true"> </span>
+                    <span class="sr-only">Github </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/ercn.cakr/" target="_blank">
+                    <span class="fa-solid fa-envelope" aria-hidden="true"> </span>
+                    <span class="sr-only">E-Mail</span>
+                </a>
+            </li>
+        </ul>
+        <p><small>&copy; 2023 Ercan Cakir. All rights reserved.</small></p>
+    </footer>
 </body>
-<script src="/Formlar/begin/js/forms.js"></script>
 
 </html>
